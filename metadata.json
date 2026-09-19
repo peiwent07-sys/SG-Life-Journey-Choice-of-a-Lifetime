@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix SG Life Journey: Choice of a Lifetime",
+  "description": "An anti-drug \u0026 anti-vaping Singapore life simulation game inspired by \u0027Life is a game\u0027 and Stardew Valley. Make pivotal choices across school stages, build resilience, explore iconic Singapore landmarks, and unlock Fantage-style cosmetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

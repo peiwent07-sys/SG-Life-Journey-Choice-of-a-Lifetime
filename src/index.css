@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    touch-action: manipulation;
+  }
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-dialogue {
+  font-family: 'VT323', monospace;
+}
+
+.font-sans-sg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Pixel rendering for game canvas */
+.pixelated {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* CRT Scanline & subtle ambient overlay */
+.crt-overlay {
+  pointer-events: none;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.22) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  background-size: 100% 4px, 6px 100%;
+}
+
+/* Stardew & Fantage UI Wood/Parchment pixel borders */
+.pixel-box {
+  border: 4px solid #4a2c11;
+  background-color: #c99355;
+  box-shadow: inset -4px -4px 0px 0px #855223, inset 4px 4px 0px 0px #dfb178, 0 4px 0px 0px #1f1207;
+}
+
+.pixel-box-dark {
+  border: 4px solid #1f1a24;
+  background-color: #2b2333;
+  box-shadow: inset -3px -3px 0px 0px #17131b, inset 3px 3px 0px 0px #3d3249;
+}
+
+.pixel-btn {
+  border: 3px solid #301d0c;
+  background-color: #e09f58;
+  box-shadow: inset -2px -2px 0px 0px #8e5824, inset 2px 2px 0px 0px #f7c388;
+  transition: all 0.08s ease;
+}
+
+.pixel-btn:hover {
+  filter: brightness(1.06);
+}
+
+.pixel-btn:active {
+  transform: translateY(2px);
+  box-shadow: inset 2px 2px 0px 0px #8e5824, inset -2px -2px 0px 0px #f7c388;
+}
+
+.pixel-btn-purple {
+  border: 3px solid #331542;
+  background-color: #8338ec;
+  box-shadow: inset -2px -2px 0px 0px #5a189a, inset 2px 2px 0px 0px #b5179e;
+}
+
+.pixel-btn-danger {
+  border: 3px solid #3d0a0a;
+  background-color: #c53030;
+  box-shadow: inset -2px -2px 0px 0px #741d1d, inset 2px 2px 0px 0px #e53e3e;
+}
+
+/* Custom Scrollbar for dialogue & wardrobe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1f1207;
+}
+::-webkit-scrollbar-thumb {
+  background: #c99355;
+  border: 2px solid #4a2c11;
+}
